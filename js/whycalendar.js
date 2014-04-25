@@ -83,6 +83,7 @@ $(function() {
     whycalendar('2011-01-01', 'wrapper');
     whycalendar('2012-01-01', 'wrapper');
     whycalendar('2013-01-01', 'wrapper');
+    whycalendar('2014-01-01', 'wrapper');
     //
     //    $('input').click(function () {
     //        whycalendar($(this).val(), 'wrapper');
