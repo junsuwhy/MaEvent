@@ -111,7 +111,7 @@ $(function() {
                 $('.day-' + str_day).css('background-color', typetocolor(d[i].type))
                 //                console.log(typetocolor(d[i].type), d[i].type)
                 .hover(function(e) {
-                        console.log(e);
+                        // console.log(e);
                         $('.info').html(arr_events[$(this).attr('data-date')])
 
                         .css('margin-left', e.pageX + 10)
@@ -122,6 +122,16 @@ $(function() {
                     function(e) {
                         $('.info').hide();
                     }
+                )
+                    .click(function(e) {
+                            // console.log($('this'));
+                            $('.info').html(arr_events[$(this).attr('data-date')])
+
+                            .css('margin-left', $(this).offset().left + 30)
+                                .css('margin-top', $(this).offset().top - 40)
+                                .show();
+                        }
+
                 );
 
             }
