@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>馬囧事件簿</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/d3.v3.js"></script>
+    <script src="js/whycalendar.js"></script>
+    <style>
+        body{
+            text-align: center;
+            color:#ffffff;
+            background-color: #000;
+        }
+        .wrapper{
+            margin:0 auto;
+            width:800px;
+            margin-bottom:50px;
+        }
+        .wrapper h2{
+/*
+            text-align: left; margin-left:8
+0px;
+*/
+/*            margin-top: 0px;*/
+            margin-bottom: 0px;
+        }
+        .month{
+            clear:both;
+            display:inline-block;
+            margin-left:10px;
+            margin-right: 10px;
+        }
+        .day{
+/*            display:inline-block;*/
+            float:left;
+            width:23px;
+            height:23px;
+/*            margin-left: 3px;*/
+            text-align: center;
+            border-bottom-style:solid;
+            border-bottom-width:1px;
+            
+        }
+        .day p{
+            
+        }
+        div.week-Sun{
+            clear:both;
+/*            display:block;*/
+        }
+        div.week-Mon{
+/*            clear:left;*/
+        }
+        div.info{
+            position: absolute;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            display:none;
+            text-align: left;
+            color:#000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>馬囧事件簿</h1>
+    <div class="info"></div>
+    <div class="wrapper">
+    </div>
+    <div class="source footer">
+        資料來源: <a href="http://www.bbnews.cc/viewpost/uP1r54X0TZfZu-K1Yxg-">感謝 Cervelo1995 </a>
+    </div>
+
+
+
+</body>
+
+</html>
