@@ -16,19 +16,27 @@ var add_cal = function(today, $cal) {
     var isfirst = "";
     if (day == 1) {
         for (var i = 0; i < today.getDay(); i++) {
-            $choose_month($cal, month).append($('<div class="day none">'));
+            $choose_month($cal, month)
+                .append($('<div class="day none">'));
         }
         isfirst = " firstday";
 
     }
-    $('<div class="day day-' + strfullday + ' week-' + weekday + isfirst + '">').html('<p>' + day + '</p>').attr('data-date', strfullday).appendTo($choose_month($cal, month));
+    $('<div class="day day-' + strfullday + ' week-' + weekday + isfirst + '">')
+        .html('<p>' + day + '</p>')
+        .attr('data-date', strfullday)
+        .appendTo($choose_month($cal, month));
+    // if (month == 1 && day == 1) {
+    //     console.log($cal, $choose_month($cal, month))
+    // }
 
 }
 
 //如果沒有月份，插入月份的div
 $choose_month = function($cal, month) {
     if ($cal.children('.month-' + month).length == 0) {
-        var $month = $('<div class="month month-' + month + '">').html('<h3>' + month + '月</h3>').appendTo($cal);
+        var $month = $('<div class="month month-' + month + '">').html('<h3>' + month + '月</h3>')
+            .appendTo($cal);
         return $month;
     } else return $cal.children('.month-' + month)
 
@@ -37,15 +45,19 @@ $choose_month = function($cal, month) {
 whycalendar = function(date, targetname) {
     var today = new Date(date);
     //$('.' + targetname).empty();
-    $cal = $('<div class="cal"></div>').appendTo('.' + targetname).append($('<h2>' + today.getFullYear() + '年</h2>'));
+    $cal = $('<div class="cal"></div>')
+        .appendTo('.' + targetname)
+        .append($('<h2>' + today.getFullYear() + '年</h2>'));
+    var days_in_this_year = ((Number(today.getFullYear()) % 4 == 0) ? 366 : 365);
+    // console.log(days_in_this_year);
     // console.log(choose_month($cal, 1).text('1234'));
-    for (var i = 0; i < ((Number(today.getFullYear()) % 4 == 0) ? 366 : 365); i++) {
+    for (var i = 0; i < days_in_this_year; i++) {
 
         add_cal(today, $cal);
         today = nextday(today);
     };
     for (var i = 1; i <= 12; i++) {
-        $('.month-' + i).addClass('lastday');
+        $('.month-' + i).children().last().addClass('lastday');
 
     }
 }
