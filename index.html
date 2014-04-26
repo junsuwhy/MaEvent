@@ -21,6 +21,21 @@
   ga('send', 'pageview');
 
 </script>
+
+<script>
+/**
+* 追蹤 Google Analytics (分析) 中出站連結點擊的函式。
+* 此函式需要有效的網址字串做為引數，並使用該網址字串
+* 做為事件標籤。
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+</script>
     <style>
         body{
             text-align: center;
@@ -88,7 +103,7 @@
     <div class="info"></div>
     <div class="wrapper">
         <div class="content"></div>
-        <div class="nextstep"><h3>接下來，如果馬囧去參觀核四!? <a href="http://nonuke.weact.in/">快來連署反核四</a></h3></div>
+        <div class="nextstep"><h3>接下來，如果馬囧去參觀核四!? <a onclick="trackOutboundLink('http://nonuke.weact.in/'); return false;" href="http://nonuke.weact.in/">快來連署反核四</a></h3></div>
         <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -105,7 +120,7 @@
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     
     <div class="source footer">
-        資料來源: <a href="http://www.bbnews.cc/viewpost/uP1r54X0TZfZu-K1Yxg-">感謝 Cervelo1995 </a>
+        資料來源: <a onclick="trackOutboundLink('http://www.bbnews.cc/viewpost/uP1r54X0TZfZu-K1Yxg-'); return false;" href="http://www.bbnews.cc/viewpost/uP1r54X0TZfZu-K1Yxg-">感謝 Cervelo1995 </a>
     </div>
     </div>
 
