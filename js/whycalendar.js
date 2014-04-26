@@ -76,17 +76,17 @@ var typetocolor = function(type) {
 
 $(function() {
 
-    whycalendar('2007-01-01', 'wrapper');
-    whycalendar('2008-01-01', 'wrapper');
-    whycalendar('2009-01-01', 'wrapper');
-    whycalendar('2010-01-01', 'wrapper');
-    whycalendar('2011-01-01', 'wrapper');
-    whycalendar('2012-01-01', 'wrapper');
-    whycalendar('2013-01-01', 'wrapper');
-    whycalendar('2014-01-01', 'wrapper');
+    whycalendar('2007-01-01', 'content');
+    whycalendar('2008-01-01', 'content');
+    whycalendar('2009-01-01', 'content');
+    whycalendar('2010-01-01', 'content');
+    whycalendar('2011-01-01', 'content');
+    whycalendar('2012-01-01', 'content');
+    whycalendar('2013-01-01', 'content');
+    whycalendar('2014-01-01', 'content');
     //
     //    $('input').click(function () {
-    //        whycalendar($(this).val(), 'wrapper');
+    //        whycalendar($(this).val(), 'content');
     //    });
 
     arr_events = [];
@@ -95,7 +95,7 @@ $(function() {
             var today = new Date(d.date);
             var str_day = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
             arr_events[str_day] = '<p style="color:' + typetocolor(d.type) + '">' + d.type + '</p><p>' + d.event + '</p>';
-        // console.log(arr_events);
+            // console.log(arr_events);
             return d
         },
         function(e, d) {
