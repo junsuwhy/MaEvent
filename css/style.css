@@ -8,3 +8,12 @@ div.bar {
 body{
 	background: url(../img/seamlesstexture12_1200_b.jpg);
 }
+div.nextstep{
+	padding: 40px 0;
+}
+a,a:link,a:visited,a:hover{
+	color: #d3381c;
+}
+div.cal{
+	padding:15px 0;
+}
