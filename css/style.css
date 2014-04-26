@@ -5,3 +5,6 @@ div.bar {
     height: 75px;   /* We'll override this later */
     background-color: teal;
 }
+body{
+	background: url(../img/seamlesstexture12_1200_b.jpg);
+}
